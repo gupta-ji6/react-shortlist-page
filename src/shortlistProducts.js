@@ -9,10 +9,10 @@ const shortlistProdcuts = [
     discount: 30,
     price: 499,
     stockCount: 10,
-    isNew: false
+    isNew: true
   },
   {
-    id: 1,
+    id: 2,
     productName: 'Pikaboo Butterfly Printed Sleeveless Dress - White',
     brandName: 'Pikaboo',
     productImage:
@@ -20,11 +20,11 @@ const shortlistProdcuts = [
     mrp: 699,
     discount: 30,
     price: 499,
-    stockCount: 10,
+    stockCount: 5,
     isNew: false
   },
   {
-    id: 1,
+    id: 3,
     productName: 'Pikaboo Butterfly Printed Sleeveless Dress - White',
     brandName: 'Pikaboo',
     productImage:
