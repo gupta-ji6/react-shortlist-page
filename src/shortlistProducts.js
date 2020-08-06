@@ -33,8 +33,8 @@ const shortlistProdcuts = [
     mrp: 699.0,
     discount: 15,
     price: 594.14,
-    stockCount: 10,
-    isNew: false
+    stockCount: 2,
+    isNew: true
   },
   {
     id: 4,
@@ -46,8 +46,8 @@ const shortlistProdcuts = [
     mrp: 1270.0,
     discount: 26,
     price: 939.8,
-    stockCount: 10,
-    isNew: false
+    stockCount: 4,
+    isNew: true
   },
   {
     id: 5,
@@ -73,7 +73,7 @@ const shortlistProdcuts = [
     discount: 0,
     price: 1250,
     stockCount: 10,
-    isNew: false
+    isNew: true
   },
   {
     id: 7,
@@ -97,7 +97,7 @@ const shortlistProdcuts = [
     mrp: 1499,
     discount: 40,
     price: 899.4,
-    stockCount: 10,
+    stockCount: 1,
     isNew: false
   },
   {
@@ -110,7 +110,7 @@ const shortlistProdcuts = [
     discount: 30,
     price: 499,
     stockCount: 10,
-    isNew: false
+    isNew: true
   }
 ];
 
