@@ -4,7 +4,7 @@ import shortlistProdcuts from '../shortlistProducts';
 import ProductItem from './ProductItem.component';
 
 const ShortListCard = () => {
-  const [products, setProcucts] = useState([shortlistProdcuts]);
+  const [products, setProcucts] = useState(shortlistProdcuts);
 
   const clearAll = () => {
     let userConfirmation = window.confirm(
