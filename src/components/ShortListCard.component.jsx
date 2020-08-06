@@ -3,13 +3,11 @@ import styled from 'styled-components';
 import shortlistProdcuts from '../shortlistProducts';
 import ProductItem from './ProductItem.component';
 
-// let products = shortlistProdcuts;
-
 const ShortListCard = () => {
-  const [products, setProcucts] = useState([]);
+  const [products, setProcucts] = useState([shortlistProdcuts]);
 
   const clearAll = () => {
-    let userConfirmation = confirm(
+    let userConfirmation = window.confirm(
       'Are you sure you want to clear all items from your shortlist?'
     );
     if (userConfirmation) {
