@@ -9,8 +9,13 @@ const ShortListCard = () => {
   const [products, setProcucts] = useState(shortlistProdcuts);
 
   const clearAll = () => {
-    setProcucts([]);
-    console.log('Cleared all items');
+    let userConfirmation = confirm(
+      'Are you sure you want to clear all items from your shortlist?'
+    );
+    if (userConfirmation) {
+      setProcucts([]);
+      console.log('Cleared all items');
+    }
   };
 
   const addToCart = product => {
