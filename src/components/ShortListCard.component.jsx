@@ -69,7 +69,7 @@ const Divider = styled.div`
 const ProductItemContainer = styled.div`
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
   padding: 20px 0px;
 `;

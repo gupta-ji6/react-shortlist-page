@@ -88,6 +88,10 @@ const ProductName = styled.h2`
   font-size: medium;
   font-weight: normal;
   padding: 0 10px;
+  height: 10vh;
+  text-overflow: ellipsis;
+  overflow-y: auto;
+  white-space: pre-line;
 `;
 
 const NewTag = styled.span`
