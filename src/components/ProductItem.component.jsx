@@ -11,6 +11,7 @@ const ProductItem = props => {
     discount,
     price
   } = props.product;
+
   return (
     <ProductCard>
       <div style={{ position: 'relative' }}>
@@ -29,8 +30,10 @@ const ProductItem = props => {
         ) : null}
       </PriceRow>
       <CTARow>
-        <AddToCartBtn>Add To Cart</AddToCartBtn>
-        <DeleteBtn>
+        <AddToCartBtn onClick={() => props.addToCart(props.product)}>
+          Add To Cart
+        </AddToCartBtn>
+        <DeleteBtn onClick={() => props.remove(props.product)}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="icon icon-tabler icon-tabler-trash"

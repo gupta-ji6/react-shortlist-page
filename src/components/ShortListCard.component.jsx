@@ -1,24 +1,58 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import shortlistProdcuts from '../shortlistProducts';
 import ProductItem from './ProductItem.component';
 
+// let products = shortlistProdcuts;
+
 const ShortListCard = () => {
+  const [products, setProcucts] = useState(shortlistProdcuts);
+
+  const clearAll = () => {
+    setProcucts([]);
+    console.log('Cleared all items');
+  };
+
+  const addToCart = product => {
+    let allProdcuts = products;
+    allProdcuts = allProdcuts.filter(item => item.id !== product.id);
+    setProcucts(allProdcuts);
+    alert(`${product.productName} is added to your cart!`);
+  };
+
+  const removeFromShortlist = product => {
+    let allProdcuts = products;
+    allProdcuts = allProdcuts.filter(item => item.id !== product.id);
+    setProcucts(allProdcuts);
+    // console.log('Removed!');
+  };
+
   return (
     <ShortlistCardContainer>
       <TitleContainer>
         <div>
           <Title>My Shortlist </Title>
-          <NumOfProdcuts>({shortlistProdcuts.length} Products) </NumOfProdcuts>
+          <NumOfProdcuts>({products.length} Products) </NumOfProdcuts>
         </div>
-        <ClearAllBtn>Clear All</ClearAllBtn>
+        <ClearAllBtn onClick={clearAll}>Clear All</ClearAllBtn>
       </TitleContainer>
       <Divider />
-      <ProductItemContainer>
-        {shortlistProdcuts.map(product => {
-          return <ProductItem key={product.id} product={product} />;
-        })}
-      </ProductItemContainer>
+      {products.length > 0 ? (
+        <ProductItemContainer>
+          {products.map(product => {
+            return (
+              <ProductItem
+                key={product.id}
+                product={product}
+                remove={removeFromShortlist}
+                addToCart={addToCart}
+              />
+            );
+          })}
+        </ProductItemContainer>
+      ) : (
+        <div>Noooo</div>
+      )}
     </ShortlistCardContainer>
   );
 };
