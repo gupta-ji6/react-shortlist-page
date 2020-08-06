@@ -6,7 +6,7 @@ import ProductItem from './ProductItem.component';
 // let products = shortlistProdcuts;
 
 const ShortListCard = () => {
-  const [products, setProcucts] = useState(shortlistProdcuts);
+  const [products, setProcucts] = useState([]);
 
   const clearAll = () => {
     let userConfirmation = confirm(
@@ -56,7 +56,13 @@ const ShortListCard = () => {
           })}
         </ProductItemContainer>
       ) : (
-        <div>Noooo</div>
+        <NoShortlisteProductContainer>
+          <EmptyListImage src="https://user-images.githubusercontent.com/21218732/89537670-47487600-d817-11ea-8cbb-c724217328aa.jpg" />
+          <div>You have not shortlisted any product yet</div>
+          <a href="https://firstcry.com">
+            <StartShoppingBtn>Start Shopping</StartShoppingBtn>
+          </a>
+        </NoShortlisteProductContainer>
       )}
     </ShortlistCardContainer>
   );
@@ -111,4 +117,30 @@ const ProductItemContainer = styled.div`
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 20px 0px;
+`;
+
+const NoShortlisteProductContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+`;
+
+const EmptyListImage = styled.img`
+  width: 25vw;
+  height: auto;
+  margin-bottom: 10px;
+`;
+
+const StartShoppingBtn = styled.button`
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #ff8110;
+  color: white;
+  font-size: medium;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+  cursor: pointer;
 `;
